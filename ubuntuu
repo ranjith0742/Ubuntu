@@ -1,0 +1,81 @@
+
+192.168.93.129
+192.168.221.128
+
+JDK 11 Installation Steps:
+
+
+Java installed location:(JAVA_HOME)
+/usr/lib/jvm/jdk-11-oracle-x64
+
+
+Jenkins Installation Steps:
+
+wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
+rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
+yum install -y jenkins
+
+
+-----------
+
+Maven download command
+
+cd /opt/softwares/
+wget https://dlcdn.apache.org/maven/maven-3/3.8.8/binaries/apache-maven-3.8.8-bin.zip
+
+maven installed path (MAVEN_HOME or M2Home)
+
+/opt/softwares/apache-maven-3.8.8
+
+
+------------------
+
+
+rpm -ivh software_name
+------------
+
+
+
+3. go to linux machine
+created a mygit folder for reference in mkdir -p /opt/githublabs
+
+
+cd /opt/githublabs
+
+
+
+
+4. add the github global infomartions
+	git config --global user.name   "ranjith0742"
+	git config --global user.email  middleware@gmail.com
+	git config --list
+
+
+5. generate SSH keypairs
+forssh pairing secured handshake with public/private keys
+
+	ssh-keygen -t rsa -C "email id"
+	ssh-keygen -t rsa -C "middleware@gmail.com"
+
+	cd .ssh/
+	cat id_rsa.pub
+	
+6. loginto github and goto s-->settings---->SSH Keys
+7.clone the githubrepositry to local machine
+	git clone git@github.com:devopstraining4455/javaapp1.git
+
+
+8. add the java files and commit
+
+git add .
+git status
+git commit -m "some info abt project"
+
+9.push the changes to global githubreposioty
+
+git push -u origin master
+
+df -h
+
+gunzip filename to unzip
+ps -ef|grep java
